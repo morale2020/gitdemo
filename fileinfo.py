@@ -42,3 +42,35 @@ for i in l1:
         l3.append(i)
     else:
         continue
+
+def full():
+    #输出原文本
+    print(line)	
+
+def word():
+    for i in l1:
+        print(i,end='')
+
+def Wordcount(lists):
+    #检索重复单词计算瓷瓶
+    wkey = {}
+    wkey = wkey.fromkeys(lists)
+    word = list(wkey.keys())
+    for i in word:
+        wkey[i] = lists.count(i)
+    return wkey
+
+def sort(wkey):
+    #词频排序
+	wkey1 = {}
+	wkey1 = sorted(wkey.items(),key=lambda d:d[1],reverse=True)
+	wkey1 = dict(wkey1)
+	return wkey1
+
+def main(word):
+    global l4
+    l4 = []
+    for x,y in word.items():
+            c = format(x),format(y)
+            l4.append(c)
+            continue
